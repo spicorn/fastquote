@@ -7,6 +7,7 @@ import { Modules } from './components/Modules'
 import { Preview } from './components/Preview'
 import { ScrollProgress } from './components/ScrollProgress'
 import { Stories } from './components/Stories'
+import { asset } from './asset'
 import './App.css'
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       <footer className="fq-footer">
         <div className="fq-wrap fq-footer__row">
           <img
-            src="/brand/fastquote-logo.png"
+            src={asset('brand/fastquote-logo.png')}
             alt="Fastquote"
             width={160}
             height={28}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { asset } from '../asset'
 import { nav } from '../content'
 
 const ICON = { size: 20, strokeWidth: 2 } as const
@@ -21,7 +22,7 @@ export function Header() {
       <div className="fq-header__bar fq-wrap">
         <a className="fq-logo" href="#top">
           <img
-            src="/brand/fastquote-logo.png"
+            src={asset('brand/fastquote-logo.png')}
             alt="Fastquote"
             width={180}
             height={31}

@@ -1,4 +1,5 @@
 import { useEffect, useState, type ComponentType } from 'react'
+import { asset } from '../asset'
 
 type LightPlayer = ComponentType<{
   src: string
@@ -25,7 +26,7 @@ export function FoldLottie() {
 
   return (
     <Player
-      src="/lottie/quote-fold.json"
+      src={asset('lottie/quote-fold.json')}
       autoplay
       loop
       className="fq-lottie"
