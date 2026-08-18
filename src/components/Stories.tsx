@@ -1,21 +1,28 @@
-import { stories } from '../content'
+import { stories } from "../content";
 
 export function Stories() {
   return (
-    <section className="fq-section fq-wrap" id="stories" aria-labelledby="stories-title">
+    <section
+      className="fq-section fq-wrap"
+      id="stories"
+      aria-labelledby="stories-title"
+    >
       <div className="fq-stories-head">
         <p className="fq-kicker">On the ground</p>
         <h2 id="stories-title">Three Fridays, three different floors.</h2>
         <p className="fq-section-lede">
-          Closed demand on a named SKU — a lodge kitchen, a clinic floor, a
-          mill. Same product line, three different Fridays.
+          Closed demand on a named Stock In Unit a lodge kitchen, a clinic
+          floor, a mill. Same product line, three different Fridays.
         </p>
       </div>
 
       <ul className="fq-stories">
         {stories.map((story) => (
           <li key={story.id}>
-            <article className="fq-ticket" aria-labelledby={`${story.id}-title`}>
+            <article
+              className="fq-ticket"
+              aria-labelledby={`${story.id}-title`}
+            >
               <header className="fq-ticket__top">
                 <p className="fq-ticket__place">{story.place}</p>
                 <p className="fq-ticket__status">{story.result}</p>
@@ -37,5 +44,5 @@ export function Stories() {
         ))}
       </ul>
     </section>
-  )
+  );
 }
