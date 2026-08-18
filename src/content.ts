@@ -45,7 +45,7 @@ export const steps = [
   },
   {
     title: 'See who actually has it',
-    copy: 'Manufacturers, distributors and retailers on tha tStock In Unit with ratings from trades that already happened.',
+    copy: 'Manufacturers, distributors and retailers on that SKU — with ratings from trades that already happened.',
   },
   {
     title: 'Close on one ticket',
@@ -65,7 +65,7 @@ export const previewTabs = [
     label: 'Live RFQ',
     chrome: 'fastquote.app/rfq/8841',
     title: 'Cement that has to be on site Friday',
-    copy: 'Kutsaga Construction named the bag, the grade and the day. Three suppliers answered on thatStock In Unit not on “building supplies.”',
+    copy: 'Kutsaga Construction named the bag, the grade and the day. Three suppliers answered on that SKU — not on “building supplies.”',
     rows: [
       { name: 'Norton Mill', meta: 'Manufacturer · 18 trades', score: '4.6', tag: 'Preferred' },
       { name: 'Mutare Depot', meta: 'Distributor · 7 trades', score: '4.2', tag: 'In stock' },
@@ -77,7 +77,7 @@ export const previewTabs = [
     label: 'Preferred book',
     chrome: 'fastquote.app/buyers/avenues/gloves',
     title: 'Surgical gloves, without retendering every month',
-    copy: 'A Harare clinic keeps two nitrileStock In Units on a preferred list. When a lot is short, the global book opens — still on the same product code.',
+    copy: 'A Harare clinic keeps two nitrile SKUs on a preferred list. When a lot is short, the global book opens — still on the same product code.',
     rows: [
       { name: 'MediLot G-200', meta: 'Nitrile N/S · UNSPSC 42132203', score: '4.8', tag: 'Preferred' },
       { name: 'Harare Sterile Co.', meta: 'Local packer · 22 deliveries', score: '4.5', tag: 'On plan' },
@@ -100,26 +100,50 @@ export const previewTabs = [
 
 export const stories = [
   {
+    id: 'lodge',
     place: 'Hospitality · Harare',
-    title: 'The lodge that needed oil by Friday',
-    copy: 'Two hundred litres of cooking oil, linen for 40 rooms, and a plumber for the east wing. Three products, three quotes, one afternoon — instead of a manager working the group chat until midnight.',
+    ref: 'RFQ 9102',
+    product: 'Cooking oil 200L',
+    extra: 'Linen for 40 rooms · plumber, east wing',
+    copy: 'Three products, three quotes, one afternoon — instead of a manager working the group chat until midnight.',
+    result: 'Closed Friday',
+    stats: [
+      { label: 'Quotes', value: '3' },
+      { label: 'Turnaround', value: '1 day' },
+    ],
   },
   {
+    id: 'clinic',
     place: 'Healthcare · Avenues',
-    title: 'The clinic that stopped re-buying gloves from memory',
-    copy: 'NitrileStock In Units live on a planned line. When a lot fails incoming inspection, the return is on the ticket and the standby supplier is already rated.',
+    ref: 'Plan 441',
+    product: 'Nitrile gloves G-200',
+    extra: 'Preferred lot · standby packer on the same code',
+    copy: 'When a lot fails incoming inspection, the return sits on the ticket and the rated standby is already there.',
+    result: 'On plan',
+    stats: [
+      { label: 'Deliveries', value: '22' },
+      { label: 'Retenders', value: '0' },
+    ],
   },
   {
+    id: 'mill',
     place: 'Milling · Norton',
-    title: 'The miller who can see next week’s bags',
-    copy: 'Leads arrive as 50kg maize meal, not as “please call me.” Quantity, buyer type and whether they have paid other mills sits on the same card.',
+    ref: 'Leads',
+    product: 'Maize meal 50kg',
+    extra: 'Retail · cash & carry · lodge kitchen',
+    copy: 'Leads arrive as quantity and buyer type — not “please call me.” Payment history with other mills sits on the same card.',
+    result: 'Live demand',
+    stats: [
+      { label: 'Leads', value: '3' },
+      { label: 'This week', value: '540' },
+    ],
   },
 ] as const
 
 export const faqs = [
   {
     q: 'Is this for buyers or for suppliers?',
-    a: 'Both. Buyers find a product and the people who can actually supply it. Suppliers see demand attached to that product. Manufacturers, distributors and retailers all sit on the sameStock In Unit.',
+    a: 'Both. Buyers find a product and the people who can actually supply it. Suppliers see demand attached to that product. Manufacturers, distributors and retailers all sit on the same SKU.',
   },
   {
     q: 'Do we have to throw out Dynamics, SAGE or Odoo?',

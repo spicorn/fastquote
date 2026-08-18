@@ -6,7 +6,7 @@ import { FoldLottie } from './FoldLottie'
 const ICON = { size: 20, strokeWidth: 2, 'aria-hidden': true } as const
 
 const proofs = [
-  { label: 'Name theStock In Unit', value: 'Not a category hunt' },
+  { label: 'Name the SKU', value: 'Not a category hunt' },
   { label: 'See who has it', value: 'Mill, depot, or retail' },
   { label: 'Close the ticket', value: 'ERP stays where it is' },
 ] as const

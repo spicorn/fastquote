@@ -24,11 +24,11 @@ export function Preview() {
   return (
     <section className="fq-section fq-wrap" id="product" aria-labelledby="product-title">
       <p className="fq-kicker">Product</p>
-      <h2 id="product-title">See how it works on a realStock In Unit.</h2>
+      <h2 id="product-title">See how it works on a real SKU.</h2>
       <p className="fq-section-lede">
         Not a catalogue dump. One listing, the people around it, and the next
-        order buyers, manufacturers, distributors and retailers on the same
-       Stock In Unit.
+        order — buyers, manufacturers, distributors and retailers on the same
+        SKU.
       </p>
 
       <div className="fq-tabs" role="tablist" aria-label="Product views">

@@ -604,23 +604,119 @@ h3 {
   background: color-mix(in srgb, var(--gold) 28%, white);
 }
 
+.fq-stories-head {
+  max-width: 38rem;
+}
+
 .fq-stories {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 16px;
   margin: 40px 0 0;
   padding: 0;
 }
 
-.fq-stories li {
+.fq-stories > li {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fq-ticket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.fq-ticket::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--space-5);
+  right: var(--space-5);
+  height: 3px;
+  background: var(--gold);
+}
+
+.fq-ticket__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.fq-ticket__place,
+.fq-ticket__status,
+.fq-ticket__ref,
+.fq-ticket__stats dt {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.fq-ticket__place,
+.fq-ticket__ref,
+.fq-ticket__stats dt {
+  color: var(--mute);
+}
+
+.fq-ticket__status {
+  color: var(--buyer);
+  flex-shrink: 0;
+}
+
+.fq-ticket__ref {
+  margin: 22px 0 6px;
+}
+
+.fq-ticket h3 {
+  font-size: 1.45rem;
+  line-height: 1.15;
+  max-width: none;
+}
+
+.fq-ticket__extra {
+  margin: 8px 0 0;
+  color: var(--mute);
+  font-size: 0.9rem;
+}
+
+.fq-ticket__copy {
+  margin: 16px 0 0;
+  color: var(--mute);
+  font-size: 0.95rem;
+}
+
+.fq-ticket__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: auto 0 0;
   padding-top: 20px;
   border-top: 1px solid var(--rule);
 }
 
-.fq-stories p:last-child {
-  color: var(--mute);
-  margin: 10px 0 0;
+.fq-ticket__stats div {
+  display: grid;
+  gap: 4px;
+}
+
+.fq-ticket__stats dd {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .fq-faq {

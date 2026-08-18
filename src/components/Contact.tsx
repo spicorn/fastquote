@@ -18,7 +18,7 @@ export function Contact() {
           <p className="fq-kicker">Ready when you are</p>
           <h2 id="contact-title">Book a walkthrough.</h2>
           <p>
-            Bring a realStock In Unit cement, gloves, maize meal, linen. We will run it
+            Bring a real SKU — cement, gloves, maize meal, linen. We will run it
             on the ticket so you can see the match, not a slide.
           </p>
           <ul className="fq-contact__direct">
@@ -64,7 +64,7 @@ export function Contact() {
               </label>
             </div>
             <label>
-              WhatStock In Unit should we run?
+              What SKU should we run?
               <textarea
                 name="message"
                 rows={3}
