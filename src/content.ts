@@ -1,161 +1,162 @@
 export const nav = [
-  { href: '#how', label: 'How it works' },
   { href: '#product', label: 'Product' },
-  { href: '#stories', label: 'Stories' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '#customers', label: 'Customers' },
+  { href: '#pricing', label: 'Pricing' },
 ] as const
 
-export const modules = [
-  {
-    name: 'The Friday order',
-    detail:
-      'A generator dies. You still need diesel this afternoon. Fastquote gives that scramble the same trail as a twelve-month plan.',
-  },
-  {
-    name: 'The year you already know',
-    detail:
-      'A clinic already knows it needs gloves every month. Hold that plan here — not in a spreadsheet named FINAL-v7.',
-  },
-  {
-    name: 'People you already trust',
-    detail:
-      'Keep a preferred book, then open the global one when the preferred mill is dry.',
-  },
-  {
-    name: 'Ratings from the trade',
-    detail:
-      'Stars come from orders that actually moved — quantity supplied, returns, and whether they showed up on Friday.',
-  },
-  {
-    name: 'The dock, on the same ticket',
-    detail:
-      'Receiving and dispatch sit on the quote, so the warehouse is not a separate rumour.',
-  },
-  {
-    name: 'The books you already run',
-    detail:
-      'Payables, receivables, and a bridge into Dynamics, SAGE or Odoo. One KYC set, Android and iOS on the floor.',
-  },
+export const erps = [
+  'Dynamics 365',
+  'Sage',
+  'Odoo',
+  'SAP',
+  'Oracle',
+  'Infor',
+  'IFS',
+  'Epicor',
+  'Acumatica',
+  'BlueYonder',
 ] as const
 
-export const steps = [
+export const howSides = [
   {
-    title: 'Name the thing, not the category',
-    copy: '“400 × 50kg of 42.5N cement, Friday” beats “construction materials.” The product is the meeting point.',
-  },
-  {
-    title: 'See who actually has it',
-    copy: 'Manufacturers, distributors and retailers on that SKU — with ratings from trades that already happened.',
-  },
-  {
-    title: 'Close on one ticket',
-    copy: 'Approvals, receiving and the invoice hang off the same quote. WhatsApp can go back to being WhatsApp.',
-  },
-] as const
-
-export const quoteLines = [
-  { label: 'Product', value: 'Portland cement 42.5N · 400 × 50kg' },
-  { label: 'Needed', value: 'Friday, Kutsaga site, Harare South' },
-  { label: 'Matches', value: 'Norton mill · Mutare depot · City Build retail' },
-] as const
-
-export const previewTabs = [
-  {
-    id: 'rfq',
-    label: 'Live RFQ',
-    chrome: 'fastquote.app/rfq/8841',
-    title: 'Cement that has to be on site Friday',
-    copy: 'Kutsaga Construction named the bag, the grade and the day. Three suppliers answered on that SKU — not on “building supplies.”',
-    rows: [
-      { name: 'Norton Mill', meta: 'Manufacturer · 18 trades', score: '4.6', tag: 'Preferred' },
-      { name: 'Mutare Depot', meta: 'Distributor · 7 trades', score: '4.2', tag: 'In stock' },
-      { name: 'City Build', meta: 'Retailer · 4 trades', score: '3.9', tag: 'Same day' },
+    id: 'buyers',
+    label: 'Buyers',
+    heading: 'Procure',
+    line: 'Find the product, and the people who can supply it, faster.',
+    items: [
+      'Global suppliers list',
+      'Preferred supplier list',
+      'Buyer reviews',
+      'Buyer service ratings',
+      'Planned procurement (tender, RFQ, bids)',
+      'Ad-hoc procurement (tender, RFQ, bids)',
+      'Trade payables management',
+      'Integration with existing ERPs',
     ],
   },
   {
-    id: 'book',
-    label: 'Preferred book',
-    chrome: 'fastquote.app/buyers/avenues/gloves',
-    title: 'Surgical gloves, without retendering every month',
-    copy: 'A Harare clinic keeps two nitrile SKUs on a preferred list. When a lot is short, the global book opens — still on the same product code.',
-    rows: [
-      { name: 'MediLot G-200', meta: 'Nitrile N/S · UNSPSC 42132203', score: '4.8', tag: 'Preferred' },
-      { name: 'Harare Sterile Co.', meta: 'Local packer · 22 deliveries', score: '4.5', tag: 'On plan' },
-      { name: 'Bulk Import Desk', meta: 'Opens if preferred is dry', score: '4.1', tag: 'Standby' },
+    id: 'product',
+    label: 'Product',
+    heading: 'The listing',
+    line: 'The link between buyers and suppliers around one specific product.',
+    items: [
+      'Single specific product listing',
+      'Standards mapping — HS, SIC, NAICS, UNSPSC',
+      'Supplier-based product review',
+      'Supplier-based service ratings',
+      'Quantity supplied to date',
+      'Returns to date',
     ],
   },
   {
-    id: 'leads',
-    label: 'Supplier leads',
-    chrome: 'fastquote.app/leads/maize-meal-50kg',
-    title: 'A miller who stopped cold-calling',
-    copy: 'Demand is attached to 50kg maize meal — three retailers this month, quantities visible, KYC already sitting in one set.',
-    rows: [
-      { name: 'Mbare Fresh Mart', meta: 'Retail · 80 bags / week', score: 'Lead', tag: 'New' },
-      { name: 'Glen View Cash & Carry', meta: 'Distributor · 400 bags', score: 'Lead', tag: 'Repeat' },
-      { name: 'Lodge kitchen, Nyanga', meta: 'Hospitality · 60 bags', score: 'Lead', tag: 'Seasonal' },
+    id: 'suppliers',
+    label: 'Suppliers',
+    heading: 'Supply',
+    line: 'Find buyer leads for the products you actually sell.',
+    items: [
+      'Global buyers list',
+      'Preferred buyers list',
+      'Point of sale',
+      'Product-based lead generation',
+      'Single KYC set',
+      'Supplier review',
+      'Supplier rating',
+      'Trade receivables management',
+      'Integration with existing ERP / systems',
     ],
   },
 ] as const
 
-export const stories = [
+export const skuExamples = [
   {
-    id: 'lodge',
-    place: 'Hospitality · Harare',
-    ref: 'RFQ 9102',
-    product: 'Cooking oil 200L',
-    extra: 'Linen for 40 rooms · plumber, east wing',
-    copy: 'Three products, three quotes, one afternoon — instead of a manager working the group chat until midnight.',
-    result: 'Closed Friday',
+    id: 'gloves',
+    label: 'Healthcare',
+    ref: 'RFQ 441',
+    name: 'Nitrile gloves G-200',
+    extra: '400 boxes · needed this month',
+    standards: 'UNSPSC 42132203',
     stats: [
-      { label: 'Quotes', value: '3' },
-      { label: 'Turnaround', value: '1 day' },
+      { label: 'Supplied', value: '22' },
+      { label: 'Returns', value: '0' },
+      { label: 'Rating', value: '4.8' },
+    ],
+    rows: [
+      { name: 'Preferred packer', meta: 'Manufacturer', tag: 'Preferred', score: '4.8' },
+      { name: 'Harare depot', meta: 'Distributor', tag: 'In stock', score: '4.5' },
+      { name: 'Standby import', meta: 'Retail / import', tag: 'Global', score: '4.1' },
     ],
   },
   {
-    id: 'clinic',
-    place: 'Healthcare · Avenues',
-    ref: 'Plan 441',
-    product: 'Nitrile gloves G-200',
-    extra: 'Preferred lot · standby packer on the same code',
-    copy: 'When a lot fails incoming inspection, the return sits on the ticket and the rated standby is already there.',
-    result: 'On plan',
+    id: 'cement',
+    label: 'Construction',
+    ref: 'RFQ 8841',
+    name: 'Portland cement 42.5N',
+    extra: '400 × 50kg · site Friday',
+    standards: 'UNSPSC 30111601',
     stats: [
-      { label: 'Deliveries', value: '22' },
-      { label: 'Retenders', value: '0' },
+      { label: 'Supplied', value: '18' },
+      { label: 'Returns', value: '1' },
+      { label: 'Rating', value: '4.6' },
     ],
+    rows: [
+      { name: 'Norton mill', meta: 'Manufacturer', tag: 'Preferred', score: '4.6' },
+      { name: 'Mutare depot', meta: 'Distributor', tag: 'In stock', score: '4.2' },
+      { name: 'City merchant', meta: 'Retailer', tag: 'Same day', score: '3.9' },
+    ],
+  },
+] as const
+
+export const proof = [
+  { name: 'African Sun', sector: 'Hospitality' },
+  { name: 'ZB Financial', sector: 'Financial services' },
+  { name: 'PRAZ', sector: 'Public procurement' },
+] as const
+
+export const alsoOnBook = [
+  { name: 'Avenues Clinic', sector: 'Healthcare' },
+  { name: 'Madokero', sector: 'Healthcare' },
+  { name: 'Asimba', sector: 'Retail' },
+  { name: 'ZPC', sector: 'Energy' },
+] as const
+
+export const plans = [
+  {
+    id: 'payg',
+    name: 'Pay as you go',
+    detail: 'Billed as you trade. Same lists and tenders, until you licence the floor.',
   },
   {
-    id: 'mill',
-    place: 'Milling · Norton',
-    ref: 'Leads',
-    product: 'Maize meal 50kg',
-    extra: 'Retail · cash & carry · lodge kitchen',
-    copy: 'Leads arrive as quantity and buyer type — not “please call me.” Payment history with other mills sits on the same card.',
-    result: 'Live demand',
-    stats: [
-      { label: 'Leads', value: '3' },
-      { label: 'This week', value: '540' },
-    ],
+    id: 'licence',
+    name: 'Licence',
+    detail: 'Workflow, point of sale and warehouse on one organisation.',
   },
+] as const
+
+export const planFeatures = [
+  { name: 'Tender, RFQ and bids', payg: true, licence: true },
+  { name: 'Preferred and global lists', payg: true, licence: true },
+  { name: 'Ratings and reviews', payg: true, licence: true },
+  { name: 'ERP bridge', payg: true, licence: true },
+  { name: 'Point of sale', payg: false, licence: true },
+  { name: 'Warehouse', payg: false, licence: true },
 ] as const
 
 export const faqs = [
   {
-    q: 'Is this for buyers or for suppliers?',
-    a: 'Both. Buyers find a product and the people who can actually supply it. Suppliers see demand attached to that product. Manufacturers, distributors and retailers all sit on the same SKU.',
+    q: 'What is Fastquote?',
+    a: 'Infrastructure that matches buyers and suppliers on a specific product then hangs procurement, ratings, payables and receivables off that listing, with a bridge into the ERP you already run.',
   },
   {
-    q: 'Do we have to throw out Dynamics, SAGE or Odoo?',
-    a: 'No. Fastquote is the quote and the trail. The books you already run stay the books — we bridge in.',
+    q: 'Who is it for?',
+    a: 'Public and private buying organisations, and the manufacturers, distributors and retailers who supply them.',
   },
   {
-    q: 'Can public sector teams use it?',
-    a: 'Yes. Public and private sit on the same product line, with a proper RFQ trail instead of an inbox full of PDFs named scan_final2.',
+    q: 'Does it replace our ERP?',
+    a: 'No. Dynamics 365, Sage, Odoo, SAP, Oracle, Infor, IFS, Epicor, Acumatica and BlueYonder stay the books. Fastquote is the trade layer in front.',
   },
   {
     q: 'How do we pay?',
-    a: 'Licence for workflow, POS and warehouse — or pay as you go if you are not ready to buy the whole floor. We will map that on the walkthrough.',
+    a: 'Licence for workflow, POS and warehouse, or pay as you go.',
   },
 ] as const
 
@@ -164,7 +165,7 @@ export const trusted = [
   'ZB Financial',
   'Avenues Clinic',
   'Madokero',
-  'asimba',
+  'Asimba',
   'ZPC',
   'PRAZ',
 ] as const

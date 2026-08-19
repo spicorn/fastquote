@@ -1,12 +1,11 @@
 import { Contact } from './components/Contact'
+import { Customers } from './components/Customers'
 import { Faq } from './components/Faq'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
-import { Modules } from './components/Modules'
-import { Preview } from './components/Preview'
+import { Pricing } from './components/Pricing'
 import { ScrollProgress } from './components/ScrollProgress'
-import { Stories } from './components/Stories'
 import { asset } from './asset'
 import './App.css'
 
@@ -21,9 +20,8 @@ function App() {
       <main id="main">
         <Hero />
         <HowItWorks />
-        <Modules />
-        <Preview />
-        <Stories />
+        <Customers />
+        <Pricing />
         <Faq />
         <Contact />
       </main>
@@ -35,7 +33,7 @@ function App() {
             width={160}
             height={28}
           />
-          <p>© {new Date().getFullYear()} Fastquote. Quotes that land.</p>
+          <p>© {new Date().getFullYear()} Fastquote</p>
         </div>
       </footer>
     </div>

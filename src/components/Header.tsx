@@ -35,9 +35,6 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <a className="fq-btn fq-btn--gold fq-header__cta" href="#contact">
-          Book a walkthrough
-        </a>
         <button
           type="button"
           className="fq-menu"
@@ -50,9 +47,7 @@ export function Header() {
           ) : (
             <Menu {...ICON} aria-hidden="true" />
           )}
-          <span className="visually-hidden">
-            {open ? 'Close menu' : 'Open menu'}
-          </span>
+          <span className="visually-hidden">{open ? 'Close menu' : 'Open menu'}</span>
         </button>
       </div>
       {open ? (
@@ -62,13 +57,6 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a
-            className="fq-btn fq-btn--gold"
-            href="#contact"
-            onClick={() => setOpen(false)}
-          >
-            Book a walkthrough
-          </a>
         </div>
       ) : null}
     </header>

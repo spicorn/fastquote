@@ -15,11 +15,11 @@ export function Contact() {
     <section className="fq-contact" id="contact" aria-labelledby="contact-title">
       <div className="fq-wrap fq-contact__grid">
         <div>
-          <p className="fq-kicker">Ready when you are</p>
-          <h2 id="contact-title">Book a walkthrough.</h2>
+          <p className="fq-kicker">Access</p>
+          <h2 id="contact-title">Request access.</h2>
           <p>
-            Bring a real SKU — cement, gloves, maize meal, linen. We will run it
-            on the ticket so you can see the match, not a slide.
+            Tell us whether you buy or you supply. We will map Fastquote onto a
+            product and the ERP you already run.
           </p>
           <ul className="fq-contact__direct">
             <li>
@@ -55,25 +55,25 @@ export function Contact() {
                 <input name="org" type="text" autoComplete="organization" required />
               </label>
               <label>
-                I buy / I supply
-                <select name="role" required defaultValue="I buy">
-                  <option>I buy</option>
+                I procure / I supply
+                <select name="role" required defaultValue="I procure">
+                  <option>I procure</option>
                   <option>I supply</option>
-                  <option>I want to build with you</option>
+                  <option>Both</option>
                 </select>
               </label>
             </div>
             <label>
-              What SKU should we run?
+              Which ERP do you run?
               <textarea
                 name="message"
                 rows={3}
-                placeholder="e.g. 400 × 50kg 42.5N cement by Friday"
+                placeholder="e.g. Dynamics 365, Sage, Odoo, SAP — or none yet"
                 required
               />
             </label>
             <button className="fq-btn fq-btn--gold" type="submit">
-              Book a walkthrough
+              Request access
               <ArrowUpRight {...ICON} />
             </button>
           </form>
